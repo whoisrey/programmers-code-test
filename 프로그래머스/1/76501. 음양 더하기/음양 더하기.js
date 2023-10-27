@@ -1,10 +1,7 @@
 function solution(absolutes, signs) {
-    for(let i = 0; i < 1001; i++){
-        if(signs[i] === false){
-        absolutes[i] = - absolutes[i]
-        } else {
-        absolutes[i]
-        }
+    let sum = 0;
+    for(let i = 0; i < absolutes.length; i++){
+        sum += absolutes[i] * (signs[i] ? 1 : -1);
     }
-    return absolutes.reduce((a, b) => a + b)
+    return sum;
 }
